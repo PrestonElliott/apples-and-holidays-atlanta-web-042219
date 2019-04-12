@@ -51,8 +51,8 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  holiday_hash.to_s.collect do |season, holiday|
-    holiday.collect do |holiday, supplies|
+  holiday_hash.to_s.each do |season, holiday|
+    holiday.each do |holiday, supplies|
       "#{holiday}: #{supplies}"
 
     end
